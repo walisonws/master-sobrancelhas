@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Master em Sobrancelhas — Leide | Dominando o Design de Sobrancelhas</title>
+  <meta name="description" content="Aprenda com quem tem mais de 10 anos de experiência. Torne-se uma profissional de design de sobrancelhas e conquiste sua independência financeira." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== CORES ===== */
+    :root {
+      --rg: #C9A0A8;
+      --rg-light: #EDD5D9;
+      --rg-dark: #A07078;
+      --rose-light: #FAF0F2;
+      --rose-mid: #F0D8DC;
+      --black: #0D0D0D;
+      --black-light: #1A1A1A;
+      --black-mid: #252525;
+      --white: #FFFFFF;
+      --gray-light: #F8F0F2;
+      --gray: #777;
+      --text: #1a1a1a;
+    }
+
+    /* ===== UTILITIES ===== */
+    .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+    .text-center { text-align: center; }
+    .gold { color: var(--rg); }
+
+    /* ===== BOTÃO CTA ===== */
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #C9A0A8, #EDD5D9, #C9A0A8);
+      background-size: 200% auto;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: 18px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 30px rgba(201,160,168,0.4);
+      letter-spacing: 0.5px;
+      animation: pulse 2.5s infinite;
+    }
+    .btn-cta:hover {
+      background-position: right center;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(201,160,168,0.5);
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 8px 30px rgba(201,160,168,0.4); }
+      50% { box-shadow: 0 8px 45px rgba(201,160,168,0.7); }
+    }
+
+    .btn-cta-large {
+      font-size: 1.3rem;
+      padding: 22px 50px;
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    }
+
+    /* ===== HEADER ===== */
+    .top-bar {
+      background: var(--black);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+    .top-bar span { color: var(--rg-light); font-weight: 700; }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(160deg, var(--black) 0%, #0A0A0A 100%);
+      color: #fff;
+      padding: 60px 20px 70px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201,160,168,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,160,168,0.2);
+      border: 1px solid var(--rg);
+      color: var(--rg-light);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 18px;
+      border-radius: 30px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--rg-light);
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 35px;
+      max-width: 620px;
+    }
+    .hero-proof {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .hero-proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .hero-proof-item .icon { font-size: 1.1rem; }
+    .hero-cta-wrap { margin-bottom: 20px; }
+    .hero-guarantee {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 12px;
+    }
+    .hero-guarantee strong { color: var(--rg-light); }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-section {
+      background: var(--rose-light);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .video-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+    .video-section p {
+      color: var(--gray);
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+    .video-placeholder {
+      max-width: 640px;
+      margin: 0 auto 35px;
+      background: var(--black);
+      border-radius: 16px;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .video-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,160,168,0.1), transparent);
+    }
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--rg), var(--rg-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #fff;
+      z-index: 1;
+      box-shadow: 0 0 0 12px rgba(201,160,168,0.2);
+    }
+    .video-placeholder span {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+      z-index: 1;
+    }
+
+    /* ===== DOR / PROBLEMA ===== */
+    .pain-section {
+      padding: 70px 20px;
+      background: #fff;
+    }
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--rg);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 4vw, 2.4rem);
+      color: var(--black);
+      margin-bottom: 20px;
+      text-align: center;
+      line-height: 1.3;
+    }
+    .pain-list {
+      list-style: none;
+      max-width: 640px;
+      margin: 30px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 1rem;
+      color: var(--text);
+      background: var(--gray-light);
+      padding: 16px 20px;
+      border-radius: 12px;
+      border-left: 3px solid var(--rg);
+    }
+    .pain-list li .icon { font-size: 1.2rem; margin-top: 1px; flex-shrink: 0; }
+
+    /* ===== TRANSFORMAÇÃO ===== */
+    .transform-section {
+      background: linear-gradient(135deg, #1A1A1A 0%, #0D0D0D 100%);
+      color: #fff;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .transform-section .section-title { color: #fff; }
+    .transform-section .section-label { color: var(--rg-light); }
+    .transform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .transform-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,160,168,0.3);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .transform-card .big-icon { font-size: 2.5rem; margin-bottom: 14px; }
+    .transform-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--rg-light);
+      margin-bottom: 8px;
+    }
+    .transform-card p { font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+
+    /* ===== PARA QUEM É ===== */
+    .for-who-section {
+      background: var(--rose-light);
+      padding: 70px 20px;
+    }
+    .for-who-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .for-who-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 20px rgba(232,160,180,0.15);
+      border-top: 4px solid var(--rg);
+      text-align: center;
+    }
+    .for-who-card .icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .for-who-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+    .for-who-card p { font-size: 0.9rem; color: var(--gray); }
+
+    /* ===== MÓDULOS ===== */
+    .modules-section {
+      background: #fff;
+      padding: 70px 20px;
+    }
+    .modules-list {
+      max-width: 700px;
+      margin: 40px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .module-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--gray-light);
+      border-radius: 14px;
+      border: 1px solid rgba(201,160,168,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .module-item:hover {
+      transform: translateX(6px);
+      box-shadow: 0 4px 20px rgba(232,160,180,0.15);
+    }
+    .module-num {
+      min-width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--rg), var(--rg-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .module-text h4 {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .module-text p { font-size: 0.88rem; color: var(--gray); }
+
+    /* ===== INSTRUTORA ===== */
+    .instructor-section {
+      background: linear-gradient(135deg, var(--nude) 0%, var(--rose-mid) 100%);
+      padding: 70px 20px;
+    }
+    .instructor-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .instructor-photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--rg);
+      box-shadow: 0 10px 40px rgba(201,160,168,0.3);
+      background: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      flex-shrink: 0;
+    }
+    .instructor-content .section-label { text-align: left; }
+    .instructor-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    .instructor-content p {
+      color: #444;
+      font-size: 0.97rem;
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+    .stats-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .stat-item { text-align: center; }
+    .stat-item .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--rg-dark);
+      display: block;
+    }
+    .stat-item .label { font-size: 0.78rem; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ===== DEPOIMENTOS ===== */
+    .testimonials-section {
+      background: var(--black);
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .testimonials-section .section-title { color: #fff; }
+    .testimonials-section .section-label { color: var(--rg-light); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,160,168,0.25);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: left;
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: rgba(201,160,168,0.2);
+      line-height: 1;
+    }
+    .stars { color: var(--rg-light); font-size: 1rem; margin-bottom: 12px; }
+    .testimonial-card p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 16px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .testimonial-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .testimonial-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--rg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .testimonial-name-text strong {
+      display: block;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+    .testimonial-name-text span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* ===== BÔNUS ===== */
+    .bonus-section {
+      background: var(--rose-light);
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .bonus-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      max-width: 680px;
+      margin: 40px auto 0;
+    }
+    .bonus-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 24px;
+      box-shadow: 0 4px 20px rgba(232,160,180,0.15);
+      border: 2px dashed var(--rg-light);
+    }
+    .bonus-card .icon { font-size: 2.8rem; margin-bottom: 16px; }
+    .bonus-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+    .bonus-card p { font-size: 0.9rem; color: var(--gray); }
+    .bonus-tag {
+      display: inline-block;
+      background: var(--rg);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== GARANTIA ===== */
+    .guarantee-section {
+      background: #fff;
+      padding: 70px 20px;
+    }
+    .guarantee-box {
+      max-width: 680px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, var(--nude) 0%, var(--rose-mid) 100%);
+      border-radius: 24px;
+      padding: 50px 40px;
+      text-align: center;
+      border: 2px solid var(--rg-light);
+      box-shadow: 0 10px 40px rgba(201,160,168,0.15);
+    }
+    .guarantee-icon { font-size: 4rem; margin-bottom: 20px; }
+    .guarantee-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    .guarantee-box p { color: #555; font-size: 0.97rem; line-height: 1.7; }
+
+    /* ===== PREÇO / CTA FINAL ===== */
+    .pricing-section {
+      background: linear-gradient(160deg, #0D0D0D 0%, #000000 100%);
+      padding: 80px 20px;
+      text-align: center;
+      color: #fff;
+    }
+    .pricing-section .section-label { color: var(--rg-light); }
+    .pricing-section .section-title { color: #fff; }
+    .price-box {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(201,160,168,0.4);
+      border-radius: 24px;
+      padding: 50px 40px;
+      max-width: 500px;
+      margin: 40px auto;
+    }
+    .price-old {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.45);
+      text-decoration: line-through;
+      margin-bottom: 8px;
+    }
+    .price-new {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      font-weight: 900;
+      color: var(--rg-light);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .price-sub {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 30px;
+    }
+    .price-includes {
+      list-style: none;
+      margin-bottom: 30px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .price-includes li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+    }
+    .price-includes li::before {
+      content: '✓';
+      background: var(--rg);
+      color: #fff;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .pricing-guarantee {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      margin-top: 16px;
+    }
+    .pricing-guarantee span { color: var(--rg-light); }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      background: var(--rose-light);
+      padding: 70px 20px;
+    }
+    .faq-list {
+      max-width: 700px;
+      margin: 40px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    details {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(74,46,26,0.06);
+    }
+    summary {
+      font-weight: 600;
+      font-size: 0.97rem;
+      color: var(--black);
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--rg);
+      font-weight: 300;
+      transition: transform 0.2s;
+    }
+    details[open] summary::after { content: '−'; }
+    details p {
+      padding: 0 24px 20px;
+      font-size: 0.92rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* ===== FOOTER CTA ===== */
+    .footer-cta {
+      background: var(--black);
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .footer-cta p {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      margin-top: 24px;
+    }
+    .footer-cta a { color: var(--rg-light); text-decoration: none; }
+
+    /* ===== STICKY CTA MOBILE ===== */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      padding: 14px 20px;
+      z-index: 1000;
+      border-top: 2px solid var(--rg);
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .sticky-cta .price { color: var(--rg-light); font-weight: 700; font-size: 1.2rem; }
+    .sticky-cta .btn-cta { padding: 14px 28px; font-size: 0.95rem; animation: none; }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 680px) {
+      .instructor-wrap { grid-template-columns: 1fr; text-align: center; }
+      .instructor-content .section-label { text-align: center; }
+      .stats-row { justify-content: center; }
+      .instructor-photo { margin: 0 auto; }
+      .guarantee-box { padding: 36px 24px; }
+      .price-box { padding: 36px 24px; }
+      .sticky-cta { display: flex; }
+      body { padding-bottom: 80px; }
+    }
+
+    /* ===== DIVIDER ===== */
+    .gold-divider {
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--rg), transparent);
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    🔥 Oferta especial — <span>Acesso vitalício + Suporte direto com a instrutora</span> por apenas R$ 219,90
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">✦ Curso Master Profissional ✦</div>
+      <h1>
+        Torne-se uma<br />
+        <em>Expert em Design de Sobrancelhas</em><br />
+        e conquiste sua independência financeira
+      </h1>
+      <p class="hero-sub">
+        Aprenda com Leide — mais de <strong style="color: var(--rg-light)">10 anos de experiência</strong> no mercado da beleza — e domine as técnicas que vão transformar sua carreira e sua vida financeira.
+      </p>
+      <div class="hero-proof">
+        <div class="hero-proof-item"><span class="icon">⭐</span> Instrutora com +10 anos de carreira</div>
+        <div class="hero-proof-item"><span class="icon">🎓</span> Curso completo do zero ao avançado</div>
+        <div class="hero-proof-item"><span class="icon">📱</span> Acesse em qualquer dispositivo</div>
+      </div>
+      <div class="hero-cta-wrap">
+        <a href="https://pay.hotmart.com/N105791084B" class="btn-cta btn-cta-large" target="_blank" rel="noopener">
+          ✨ QUERO COMEÇAR AGORA — R$ 219,90
+        </a>
+        <p class="hero-guarantee">🔒 Garantia total de <strong>7 dias</strong> — se não gostar, devolvemos seu dinheiro</p>
+      </div>
+    </div>
+  </section>
+  <div class="gold-divider"></div>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <div class="container">
+      <div class="section-label">🎥 Assista antes de comprar</div>
+      <h2>Veja o que você vai aprender</h2>
+      <p>A Leide mostra em menos de 3 minutos como esse curso pode mudar sua vida</p>
+      <div class="video-placeholder">
+        <div class="play-btn">▶</div>
+        <span>Adicionar vídeo de apresentação aqui</span>
+      </div>
+      <a href="https://pay.hotmart.com/N105791084B" class="btn-cta" target="_blank" rel="noopener">
+        Quero garantir minha vaga agora →
+      </a>
+    </div>
+  </section>
+
+  <!-- PROBLEMA / DOR -->
+  <section class="pain-section">
+    <div class="container">
+      <div class="section-label">Você se identifica?</div>
+      <h2 class="section-title">Essas situações te parecem familiares?</h2>
+      <ul class="pain-list">
+        <li><span class="icon">😔</span> Você sonha em trabalhar com o que ama, mas ainda não sabe por onde começar?</li>
+        <li><span class="icon">💸</span> Está cansada de depender de salário fixo ou de um chefe e quer ter sua própria renda?</li>
+        <li><span class="icon">📚</span> Já fez cursos, mas sente que ainda falta confiança técnica para cobrar o que merece?</li>
+        <li><span class="icon">⏰</span> Quer uma profissão flexível que caiba nos seus horários e na sua rotina?</li>
+        <li><span class="icon">🎯</span> Quer se destacar da concorrência com resultados naturais e impressionantes?</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TRANSFORMAÇÃO -->
+  <section class="transform-section">
+    <div class="container">
+      <div class="section-label">A solução está aqui</div>
+      <h2 class="section-title">O que muda na sua vida depois do curso</h2>
+      <div class="transform-grid">
+        <div class="transform-card">
+          <div class="big-icon">💰</div>
+          <h4>Renda própria</h4>
+          <p>Comece a cobrar por atendimentos premium logo após concluir o curso</p>
+        </div>
+        <div class="transform-card">
+          <div class="big-icon">✂️</div>
+          <h4>Técnica profissional</h4>
+          <p>Domine design, acabamento e posicionamento que geram resultados naturais</p>
+        </div>
+        <div class="transform-card">
+          <div class="big-icon">🏠</div>
+          <h4>Trabalhe de casa</h4>
+          <p>Monte seu próprio espaço e receba clientes no seu horário</p>
+        </div>
+        <div class="transform-card">
+          <div class="big-icon">🌟</div>
+          <h4>Reconhecimento</h4>
+          <p>Construa sua carteira de clientes e reputação no mercado da beleza</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section class="for-who-section">
+    <div class="container text-center">
+      <div class="section-label">Para quem é este curso?</div>
+      <h2 class="section-title">Este curso foi feito para você se...</h2>
+      <div class="for-who-grid">
+        <div class="for-who-card">
+          <div class="icon">🌱</div>
+          <h4>Está começando do zero</h4>
+          <p>Nunca trabalhou com sobrancelhas e quer aprender do básico ao avançado com suporte total</p>
+        </div>
+        <div class="for-who-card">
+          <div class="icon">🔝</div>
+          <h4>Já trabalha e quer evoluir</h4>
+          <p>É profissional da beleza e quer aprimorar suas técnicas para cobrar mais e atender melhor</p>
+        </div>
+        <div class="for-who-card">
+          <div class="icon">💡</div>
+          <h4>Quer uma renda extra</h4>
+          <p>Tem outra profissão mas quer uma segunda fonte de renda flexível e lucrativa</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="gold-divider"></div>
+
+  <!-- MÓDULOS -->
+  <section class="modules-section">
+    <div class="container text-center">
+      <div class="section-label">Conteúdo do curso</div>
+      <h2 class="section-title">Tudo que você vai dominar</h2>
+      <p style="color: var(--gray); max-width: 560px; margin: 0 auto;">Um currículo completo, desenvolvido por quem viveu na prática cada uma dessas situações ao longo de mais de 10 anos</p>
+      <!-- BLOCO MÓDULO 1 -->
+      <div style="max-width:700px; margin: 40px auto 0;">
+        <div style="background: linear-gradient(135deg, #111111, #1A1A1A); border-radius: 16px 16px 0 0; padding: 20px 28px; display:flex; align-items:center; gap:14px;">
+          <span style="background: var(--rg); color:#fff; font-weight:700; font-size:0.8rem; padding:4px 14px; border-radius:20px; letter-spacing:1px; text-transform:uppercase;">Módulo 1</span>
+          <span style="font-family:'Playfair Display',serif; color:#fff; font-size:1.2rem; font-weight:700;">✂️ Design Personalizado</span>
+          <span style="margin-left:auto; color:rgba(255,255,255,0.5); font-size:0.82rem;">7 aulas</span>
+        </div>
+        <div class="modules-list" style="margin-top:0; gap:2px;">
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num" style="background:linear-gradient(135deg,#C9A0A8,#EDD5D9); font-size:1.1rem;">🧴</div>
+            <div class="module-text">
+              <h4>Materiais — Tudo que você precisa ter</h4>
+              <p>Conheça os materiais essenciais, marcas recomendadas e como montar seu kit profissional gastando pouco</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">01</div>
+            <div class="module-text">
+              <h4>Higienização — A base de tudo</h4>
+              <p>Aprenda o protocolo correto de higienização para garantir segurança, conforto e profissionalismo em cada atendimento</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">02</div>
+            <div class="module-text">
+              <h4>Mapeamento — O segredo do design perfeito</h4>
+              <p>Domine as técnicas de mapeamento para criar sobrancelhas simétricas e harmoniosas que respeitam o rosto de cada cliente</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">03</div>
+            <div class="module-text">
+              <h4>Aparar as sobrancelhas — Precisão e acabamento</h4>
+              <p>Aprenda a aparar corretamente para dar volume e forma, evitando os erros mais comuns que comprometem o resultado</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">04</div>
+            <div class="module-text">
+              <h4>Epilação — Técnica e delicadeza</h4>
+              <p>Domine as técnicas de epilação que garantem um acabamento limpo, natural e duradouro para suas clientes</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">05</div>
+            <div class="module-text">
+              <h4>Finalização — O toque que faz a diferença</h4>
+              <p>Aprenda a finalizar com perfeição, deixando a sobrancelha definida, com aspecto natural e resultado que encanta</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0 0 14px 14px; border-top:none;">
+            <div class="module-num" style="background:linear-gradient(135deg,#C9A0A8,#EDD5D9); font-size:1.1rem;">🪡</div>
+            <div class="module-text">
+              <h4>Manuseio da linha — Habilidade que abre mercado</h4>
+              <p>Aprenda o manuseio correto da linha para depilar com precisão, velocidade e conforto para a cliente</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOCO MÓDULO 2 -->
+      <div style="max-width:700px; margin: 24px auto 0;">
+        <div style="background: linear-gradient(135deg, #C4607A, #D4869A); border-radius: 16px 16px 0 0; padding: 20px 28px; display:flex; align-items:center; gap:14px;">
+          <span style="background: var(--rg); color:#fff; font-weight:700; font-size:0.8rem; padding:4px 14px; border-radius:20px; letter-spacing:1px; text-transform:uppercase;">Módulo 2</span>
+          <span style="font-family:'Playfair Display',serif; color:#fff; font-size:1.2rem; font-weight:700;">🌿 Design com Henna</span>
+          <span style="margin-left:auto; color:rgba(255,255,255,0.5); font-size:0.82rem;">5 aulas</span>
+        </div>
+        <div class="modules-list" style="margin-top:0; gap:2px;">
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num" style="background:linear-gradient(135deg,#C9A0A8,#EDD5D9); font-size:1.1rem;">🌿</div>
+            <div class="module-text">
+              <h4>Preparação da henna — Segredo da cor perfeita</h4>
+              <p>Aprenda a preparar a henna na consistência e tonalidade certas para cada tipo de sobrancelha e tom de pele</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">01</div>
+            <div class="module-text">
+              <h4>Aplicação — Técnica que valoriza o resultado</h4>
+              <p>Domine a aplicação correta que garante cobertura uniforme, bordas definidas e um resultado impecável e duradouro</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">02</div>
+            <div class="module-text">
+              <h4>Alinhamento — Simetria que transforma o rosto</h4>
+              <p>Aprenda a alinhar com precisão para criar um design harmonioso que valoriza as feições naturais de cada cliente</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0; border-top:none;">
+            <div class="module-num">03</div>
+            <div class="module-text">
+              <h4>Tempo e retirada — O timing que define a cor</h4>
+              <p>Entenda o tempo ideal de pose e a técnica correta de retirada para garantir a cor e duração perfeitas</p>
+            </div>
+          </div>
+          <div class="module-item" style="border-radius:0 0 14px 14px; border-top:none;">
+            <div class="module-num">04</div>
+            <div class="module-text">
+              <h4>Finalização — O acabamento que fideliza</h4>
+              <p>O toque final que transforma um bom trabalho em algo extraordinário — a técnica que faz a cliente voltar sempre</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTRUTORA -->
+  <section class="instructor-section">
+    <div class="container">
+      <div class="instructor-wrap">
+        <div class="instructor-photo">👩</div>
+        <div class="instructor-content">
+          <div class="section-label">Sua instrutora</div>
+          <h2>Leide — 10 anos transformando sobrancelhas e vidas</h2>
+          <p>
+            Leighani, carinhosamente conhecida como <strong>Leide</strong>, é designer de sobrancelhas com mais de <strong>10 anos de carreira</strong> no mercado da beleza. Ao longo dessa trajetória, ela construiu uma carteira sólida de clientes fiéis e desenvolveu uma visão técnica única sobre design, proporção e acabamento.
+          </p>
+          <p>
+            Apaixonada por ensinar, Leide criou este curso para levar o mesmo conhecimento que a transformou — da prática diária com clientes reais — para quem deseja entrar ou se destacar nessa profissão.
+          </p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="num">+10</span>
+              <span class="label">Anos de carreira</span>
+            </div>
+            <div class="stat-item">
+              <span class="num">100%</span>
+              <span class="label">Dedicação ao aluno</span>
+            </div>
+            <div class="stat-item">
+              <span class="num">∞</span>
+              <span class="label">Suporte vitalício</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-label">O que dizem as alunas</div>
+      <h2 class="section-title">Resultados reais de quem já estudou com a Leide</h2>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"[Depoimento real da aluna — adicionar quando disponível. Ex: Antes do curso eu me sentia insegura, hoje já tenho minhas próprias clientes e uma renda extra todo mês!]"</p>
+          <div class="testimonial-name">
+            <div class="testimonial-avatar">A</div>
+            <div class="testimonial-name-text">
+              <strong>[Nome da Aluna]</strong>
+              <span>[Cidade, Estado]</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"[Depoimento real — adicionar quando disponível. Ex: A Leide é incrível! Explica cada detalhe com muita clareza e o suporte dela faz toda a diferença.]"</p>
+          <div class="testimonial-name">
+            <div class="testimonial-avatar">B</div>
+            <div class="testimonial-name-text">
+              <strong>[Nome da Aluna]</strong>
+              <span>[Cidade, Estado]</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"[Depoimento real — adicionar quando disponível. Ex: Comecei do zero, sem nenhuma experiência. Hoje atendo em casa e já paguei o curso com o primeiro mês de trabalho!]"</p>
+          <div class="testimonial-name">
+            <div class="testimonial-avatar">C</div>
+            <div class="testimonial-name-text">
+              <strong>[Nome da Aluna]</strong>
+              <span>[Cidade, Estado]</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BÔNUS -->
+  <section class="bonus-section">
+    <div class="container text-center">
+      <div class="section-label">🎁 O que está incluído</div>
+      <h2 class="section-title">Tudo que você recebe ao se inscrever</h2>
+      <div class="bonus-cards">
+
+        <div class="bonus-card">
+          <div class="icon">📱</div>
+          <h4>Acesso Vitalício</h4>
+          <p>Assista quando quiser, quantas vezes quiser, para sempre. O conteúdo é seu.</p>
+          <span class="bonus-tag">✦ Incluído</span>
+        </div>
+
+        <div class="bonus-card">
+          <div class="icon">💬</div>
+          <h4>Suporte Direto com a Leide</h4>
+          <p>Tire todas as suas dúvidas diretamente com a instrutora. Suporte vitalício incluído.</p>
+          <span class="bonus-tag">✦ Exclusivo</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="guarantee-box">
+        <div class="guarantee-icon">🛡️</div>
+        <h2>Garantia de 7 dias — sem perguntas</h2>
+        <p>
+          Você tem <strong>7 dias completos</strong> para assistir ao curso, aplicar o conteúdo e ver se é tudo que esperava. Se por qualquer motivo não ficar satisfeita, basta entrar em contato e devolvemos <strong>100% do seu investimento</strong>. Sem burocracia, sem questionamentos. O risco é zero para você.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREÇO / CTA FINAL -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-label">Investimento</div>
+      <h2 class="section-title">Transforme sua carreira hoje</h2>
+      <div class="price-box">
+        <div class="price-old">De R$ 497,00</div>
+        <div class="price-new">R$ 219,90</div>
+        <div class="price-sub">Pagamento único — Acesso vitalício</div>
+        <ul class="price-includes">
+          <li>Curso Master em Sobrancelhas completo</li>
+          <li>Acesso vitalício em qualquer dispositivo</li>
+          <li>Suporte direto com a instrutora</li>
+          <li>Certificado de conclusão digital</li>
+          <li>Garantia de 7 dias</li>
+        </ul>
+        <a href="https://pay.hotmart.com/N105791084B" class="btn-cta btn-cta-large" target="_blank" rel="noopener">
+          ✨ QUERO COMEÇAR AGORA
+        </a>
+        <p class="pricing-guarantee">🔒 Compra 100% segura · <span>Garantia de 7 dias</span> · Hotmart</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container text-center">
+      <div class="section-label">Dúvidas frequentes</div>
+      <h2 class="section-title">Perguntas e respostas</h2>
+      <div class="faq-list">
+
+        <details>
+          <summary>Preciso ter experiência prévia para fazer o curso?</summary>
+          <p>Não! O curso foi desenvolvido para receber desde quem nunca tocou em uma sobrancelha até profissionais que já trabalham na área e querem se aperfeiçoar. O conteúdo é progressivo e acessível.</p>
+        </details>
+
+        <details>
+          <summary>Por quanto tempo tenho acesso ao curso?</summary>
+          <p>Para sempre. Você paga uma única vez e o conteúdo é seu vitaliciamente. Pode assistir quando quiser, quantas vezes precisar.</p>
+        </details>
+
+        <details>
+          <summary>Como funciona o suporte para tirar dúvidas?</summary>
+          <p>Você tem acesso direto à Leide para tirar todas as suas dúvidas. O suporte é vitalício — não existe prazo para acabar.</p>
+        </details>
+
+        <details>
+          <summary>E se eu não gostar do curso?</summary>
+          <p>Você tem 7 dias de garantia total. Se não ficar satisfeita por qualquer motivo, é só entrar em contato e devolvemos 100% do seu investimento. Sem complicações.</p>
+        </details>
+
+        <details>
+          <summary>Posso acessar pelo celular?</summary>
+          <p>Sim! O curso é acessível em qualquer dispositivo — celular, tablet ou computador. Estude no seu ritmo, onde e quando quiser.</p>
+        </details>
+
+        <details>
+          <summary>Recebo certificado ao concluir o curso?</summary>
+          <p>Sim! Ao finalizar o curso você recebe seu certificado de conclusão digital, que pode ser utilizado para comprovar sua qualificação profissional.</p>
+        </details>
+
+        <details>
+          <summary>Como recebo acesso após a compra?</summary>
+          <p>Imediatamente após a confirmação do pagamento, você recebe por e-mail as instruções de acesso à plataforma Hotmart, onde o curso está hospedado.</p>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER CTA -->
+  <section class="footer-cta">
+    <div class="container">
+      <div class="section-label" style="color: var(--rg-light);">Última chamada</div>
+      <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 4vw, 2rem); color: #fff; margin-bottom: 20px; line-height: 1.3;">
+        Sua carreira como designer de sobrancelhas começa com <em style="color: var(--rg-light)">uma decisão</em>
+      </h2>
+      <a href="https://pay.hotmart.com/N105791084B" class="btn-cta btn-cta-large" target="_blank" rel="noopener">
+        ✨ QUERO GARANTIR MINHA VAGA — R$ 219,90
+      </a>
+      <p>🔒 Compra segura · Garantia de 7 dias · <a href="https://pay.hotmart.com/N105791084B">hotmart.com</a></p>
+    </div>
+  </section>
+
+  <!-- STICKY CTA MOBILE -->
+  <div class="sticky-cta">
+    <div class="price">R$ 219,90</div>
+    <a href="https://pay.hotmart.com/N105791084B" class="btn-cta" target="_blank" rel="noopener">
+      Garantir vaga →
+    </a>
+  </div>
+
+</body>
+</html>
